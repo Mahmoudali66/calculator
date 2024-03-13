@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--maincolor);
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+:root {
+    --maincolor: hsl(268, 75%, 9%);
+    --screen: hsl(268, 71%, 12%);
+    --keybadbackground:hsl(268, 71%, 12%);
+    --keybackground:  hsl(281, 89%, 26%);
+    --keyshadow: hsl(285, 91%, 52%);
+    
+    --togglebackground: hsl(176, 100%, 44%);
+    --toggleshadow: hsl(177, 92%, 70%);
+    
+    --lastkeybackground: hsl(268, 47%, 21%);
+    --lastKeyshadow: hsl(290, 70%, 36%);
+
+    --textcolor: hsl(52, 100%, 62%);
+    --btntextcolor: hsl(52, 100%, 62%);
+    --keybtnhover: hsl(285, 91%, 52%);
+    --btn2text: hsl(198, 20%, 13%);
+    --btn2background: hsl(176, 100%, 44%);
+    --btntext: hsl(0, 0%, 100%);
+    --screentext: hsl(52, 100%, 62%);
+  }
+.container{
+    width: 25%;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top p{
+    color: var(--textcolor);
+}
+.top-theme{
+    display: flex;
+    align-items: last baseline;
+}
+.top-theme p{
+    font-size: x-small;
+    margin-right: 10%;
+    margin-bottom: 30%;
+}
+label{
+    color: var(--textcolor);
+}
+.top-theme-radio-div{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+.toggle{
+    background-color:  var(--screen);
+    border-radius: 10px;
+    width: 90%;
+    padding-bottom: 5%;
+}
+.toggle input{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.toggle input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+#theme1:checked::before{
+    background-color: hsl(0, 63%, 50%);
+}
+#theme2:checked::before{
+    background-color:  hsl(25, 93%, 52%);
+}
+#theme3:checked::before{
+    background-color: hsl(176, 100%, 44%);
+}
+.middle{
+    width: 100%;
+    height: 10vh;
+    background-color:  var(--screen) ;
+    border-radius: 10px;
+    color: var(--screentext);
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5%;
+}
+.last{
+    width: 100%;
+    height: 45vh;
+    padding: 3%;
+    background-color: var(--keybadbackground);
+    border-radius: 10px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.last-keybad{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.last-keybad-btn{
+    width: 20%;
+    height: 6vh;
+    border-radius: 10px;
+    border-style: none;
+    color: var(--btntextcolor);
+    background-color: var(--keybackground);
+    box-shadow: 0px 5px 2px var(--keyshadow);
+    font-family: 'League Spartan', sans-serif;
+    font-size: larger;
+}
+.btn{
+    background-color:  var(--lastkeybackground);
+    color: var(--btntext);
+    box-shadow: 0px 5px 2px var(--lastKeyshadow);
+    font-size: larger;
+}
+.btn2{
+    background-color: var(--btn2background);
+    color:  var(--btn2text);
+    font-size: larger;
+    box-shadow: 0px 5px 2px var(--toggleshadow);
+}
+.last-keybad-last{
+    width: 45%;
+    height: 5vh;
+    border-radius: 10px;
+    border-style: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.last-keybad-btn:hover{
+    background-color: var(--keybtnhover);
+}
+.btn:hover{
+    background-color: var(--lastKeyshadow);
+}
+.btn2:hover{
+    background-color: var(--toggleshadow);
+}
